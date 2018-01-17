@@ -78,7 +78,37 @@
             <a class="mdl-navigation__link" href="#b0" id="lname"><span onclick="document.getElementById('lname').click();" class="mdl-layout-title">Seda inside</span></a>
             <div class="mdl-layout-spacer"></div>
             <div>
-               
+                 <span class="mdl-chip mdl-chip--contact mdl-color--green mdl-color-text--white mdl-cell--hide-phone" style="cursor:pointer;" onclick="document.getElementById('lang_menu').click();">
+
+                    <span class="mdl-chip__contact">
+
+                        <button id="lang_menu" class="mdl-button mdl-js-button mdl-button--icon">
+
+                            <i class="material-icons">language</i>
+
+                        </button>
+
+                    </span>
+
+                    <span class="mdl-chip__text">Languages</span>
+
+                </span>
+
+                <button id="lang_menu" class="mdl-button mdl-js-button mdl-button--icon mdl-cell--hide-desktop mdl-cell--hide-tablet">
+
+                    <i class="material-icons">language</i>
+
+                </button>
+
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="lang_menu">
+
+                    <li class="mdl-menu__item" onclick="location.pathname = '/zh.html'"><span class="mdl-chip__contact mdl-color--red mdl-color-text--white">C</span>中文</li>
+
+                    <li class="mdl-menu__item" onclick="location.pathname = '/ko.html'"><span class="mdl-chip__contact mdl-color--blue mdl-color-text--white">K</span>한국어</li>
+
+                    <li class="mdl-menu__item" onclick="location.pathname = '/'"><span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">E</span>English</li>
+
+                </ul>
             </div>
         </div>
     </header>
@@ -143,7 +173,7 @@
             <hr>
         </div>
            <div id="b2a" style="background-color:#FFFFFF;padding:3em;color:black;">
-           <h2 class="gray">Projects</h2>
+           <h5 class="gray">Projects</h5>
             <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
                 <img src="images/Ballgame.png" width="100%" style="max-width:128px;">                   
