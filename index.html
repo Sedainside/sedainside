@@ -77,39 +77,6 @@
 
         <div class="mdl-layout__header-row">
             <a class="mdl-navigation__link" href="#b0" id="lname"><span onclick="document.getElementById('lname').click();" class="mdl-layout-title">Seda inside</span></a>
-           <div class="mdl-layout-spacer"></div>
-            <div>
-                 <span class="mdl-chip mdl-chip--contact mdl-color--orange mdl-color-text--white mdl-cell--hide-phone" style="margin-right:1rem;cursor:pointer;" onclick="document.getElementById('lang_menu').click();">
-
-                    <span class="mdl-chip__contact">
-
-                        <button id="lang_menu" class="mdl-button mdl-js-button mdl-button--icon" style="margin-right:1rem;">
-
-                            <i class="fa fa-exclamation-circle"></i>
-
-                        </button>
-
-                    </span>
-
-                    <span class="mdl-chip__text">공지사항</span>
-
-                </span>
-
-                <button id="lang_menu" class="mdl-button mdl-js-button mdl-button--icon mdl-cell--hide-desktop mdl-cell--hide-tablet">
-
-                      <i class="fa fa-exclamation-circle">공지사항</i>
-
-                </button>
-
-                <ul class="mdl-menu mdl-menu--bottom-center mdl-js-menu mdl-js-ripple-effect" for="lang_menu">
-
-                    <li class="mdl-menu__item" onclick="location.pathname = '/'"><span class="mdl-chip__contact mdl-color--blue mdl-color-text--white">G</span>Seda Games</li>
-
-                    <li class="mdl-menu__item" onclick="location.pathname = '/'"><span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">M</span>Seda Music</li>
-
-                    <li class="mdl-menu__item" onclick="location.pathname = '/'"><span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">M</span>Seda Music</li>
-                </ul>
-            </div>
             <div class="mdl-layout-spacer"></div>
             <div>
                  <span class="mdl-chip mdl-chip--contact mdl-color--green mdl-color-text--white mdl-cell--hide-phone" style="cursor:pointer;" onclick="document.getElementById('lang_menu').click();">
@@ -319,7 +286,40 @@
                         <h4><a herf="https://twitter.com/Sedainside2017"><i class="fa fa-twitter" style="font-size:1.4rem;"></i></a> @sedainside2017</h4>
                     </div>
             </div>
-           
+           <!-- Wide card with share menu button -->
+<style>
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Get Started
+    </a>
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
+  </div>
+</div>
         
     </main>
 
