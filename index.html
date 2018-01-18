@@ -54,7 +54,6 @@
             animation-name: animatebottom;
             animation-duration: 1s
         }
-
         @-webkit-keyframes animatebottom {
             from { bottom:-100px; opacity:0 }
             to { bottom:0px; opacity:1 }
@@ -68,62 +67,28 @@
                 display: inherit;
             }
         }
-        .nav-center {  
-  text-align: center;
-  ul.nav {
-    display: inline-block;
-    li {
-      display: inline
-      a {
-        float: left
-      }
-    }
-  }
-}
     </style>
     </head>
 
 <body style="background-color:#1F6E8F">
 
     <header id="nav" class="mdl-layout__header" style="position:fixed;width:100%;z-index:2;background-color:#22B6A8;color:white">
+
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+
         <div class="mdl-layout-icon" style="text-align:right;" onclick="document.getElementById('lname').click();"><img src="images/seda.png" height="35%"></div>
 
         <div class="mdl-layout__header-row">
             <a class="mdl-navigation__link" href="#b0" id="lname"><span onclick="document.getElementById('lname').click();" class="mdl-layout-title">Seda inside</span></a>
 
-    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-      <div class="nav-center">
-          <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
-          <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
-          <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
-      </div>
-    
-      <div class="mdl-tabs__panel is-active" id="starks-panel">
-        <ul>
-          <li>Eddard</li>
-          <li>Catelyn</li>
-          <li>Robb</li>
-          <li>Sansa</li>
-          <li>Brandon</li>
-          <li>Arya</li>
-          <li>Rickon</li>
-        </ul>
-      </div>
-      <div class="mdl-tabs__panel" id="lannisters-panel">
-        <ul>
-          <li>Tywin</li>
-          <li>Cersei</li>
-          <li>Jamie</li>
-          <li>Tyrion</li>
-        </ul>
-      </div>
-      <div class="mdl-tabs__panel" id="targaryens-panel">
-        <ul>
-          <li>Viserys</li>
-          <li>Daenerys</li>
-        </ul>
-      </div>
-    </div>
             <div class="mdl-layout-spacer"></div>
             <div>
                  <span class="mdl-chip mdl-chip--contact mdl-color--green mdl-color-text--white mdl-cell--hide-phone" style="cursor:pointer;" onclick="document.getElementById('lang_menu').click();">
