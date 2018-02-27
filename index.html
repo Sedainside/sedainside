@@ -46,6 +46,33 @@
         .gray {
             color: #707070;
         }
+        .demo-layout-transparent {
+        background: url("images/display1.png") center / cover;
+        }
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+  
+        color: white;
+        }
+        .widecard > .mdl-card__title {
+            color: #ffffff;
+            height: 176px;
+            background: url("images/seda_logo.jpg") center / cover;
+        }
+        .widecard > .mdl-card__menu {
+            color: #ffffff;
+        }
+        .center {
+            width:60%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .animate-apear {
+            -webkit-animation-name: animateapear;
+            -webkit-animation-duration: 1s;
+            animation-name: animateapear;
+            animation-duration: 1s
+        }
         .animate-bottom {
             position: relative;
             -webkit-animation-name: animatebottom;
@@ -69,20 +96,14 @@
     </style>
     </head>
 
-<body style="background-color:#1F6E8F">
- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header id="nav" class="mdl-layout__header" style="position:fixed;width:100%;z-index:2;background-color:#22B6A8;color:white">
+<body style="background-color:#ffffff">
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">Seda inside</span>
                 <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="https://sedainside.github.io/sedainside/">홈</a>
-        <a class="mdl-navigation__link" href="https://sedainside.github.io/sedainside/팀소개.html">팀소개</a>
-        <a class="mdl-navigation__link" href="https://sedainside.github.io/sedainside/games.html">Seda Games</a>
-        <a class="mdl-navigation__link" href="https://sedainside.github.io/sedainside/music.html">Seda Music</a>
-        <a class="mdl-navigation__link" href="https://sedainside.github.io/sedainside/video.html">Seda Video art</a>
-      </nav>
+
         </div>
       </header>
      <div class="mdl-layout__drawer">
@@ -96,29 +117,72 @@
       </div>
     </div>
     <div id="loading" style="height:100%;background-color:#29434e;position:fixed;z-index:1;"></div>
-
+    <div style="height:27em"></div>
     <main class="mdl-layout__content animate-bottom" style="width:100%;display:none;" id="main">
-      
-       
-        
-        <div id="b2a" style="background-color:#FFFFFF;padding:3em;color:black;">
-            <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
-                <img src="images/Seda_logo.jpg" width="50%" style="max-width:128px;">                   
-                    <h2><b class="pink">Seda Inside</b></h2>
-                    <h4 class="gray">TEAM</h4>
-                    <hr class="mdl-cell--hide-desktop">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="widecard mdl-card mdl-shadow--2dp center">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text" style="color:#000000">Seda Inside</h2>
                 </div>
-                <div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:left">
-                    <p><b class= "pink">Seda Inside</b>는 다양한 분야에서 활동하며 대중들에게 팀원들의 재능을 알리고 다양한 매체를 통해 긍정적인 영향을 미치도록하기위해 결성된 팀입니다.</p>
+                <div class="mdl-card__supporting-text">
+                    <p style="font-size: 1em;"><b class= "pink">Seda Inside</b>는 다양한 분야에서 활동하며 대중들에게 팀원들의 재능을 알리고 다양한 매체를 통해 긍정적인 영향을 미치도록하기위해 결성된 팀입니다.</p>
                     <br>
-                    <p><b class= "pink">Seda Inside</b>는 팀원들간의 좋은 팀워크와 즐거운 분위기에서 서로 격려하며 사람들의 의견과 평가를 반영하여 작업하는 것이 특징입니다.Seda inside team의 긍정적 에너지가 저희의 작업물을 통해 여러분들께 전해졌으면 합니다!</p>  
-                    <b class = "gray">*ios 유저분들께서는 데스크탑으로 방문하시는 것을 추천합니다.</b>
-                     
-            </div>                   
-           </div>
-            <hr>
+                    <p style="font-size: 1em;"><b class= "pink">Seda Inside</b>는 팀원들간의 좋은 팀워크와 즐거운 분위기에서 서로 격려하며 사람들의 의견과 평가를 반영하여 작업하는 것이 특징입니다.Seda inside team의 긍정적 에너지가 저희의 작업물을 통해 여러분들께 전해졌으면 합니다!</p>  
+                </div>                    
+                <button id="show-dialog" type="button" class="mdl-button">더보기</button>
+                <dialog class="mdl-dialog">
+                  <h4 class="mdl-dialog__title">인사말</h4>
+                  <div class="mdl-dialog__content">
+                    <p style="font-size: 1em;">
+                        안녕하세요 세다인사이드 입니다. 2018년 저희가 야심차게 준비한 프로젝트를 진행하려고 합니다. 세다인사이드는 2017년 후반에 개설되어 2018년부터 정식 활동을 시작하였습니다. 세다인사이드는 사람들이 흥미와 재미를 느낄 수 있는 노래나 영상 그리고 게임들을 만들어서 트위치,유튜브,트위터,Google play그리고 웹사이트 등 여러곳에 게시물을 올려, 사람들이 보고 웃고 즐길수있는 일을 합니다. 여러명의 디자이너들과 제작자들,기획자들,프로그래머들이 함께하여 가장재미있을 것같은 컨텐츠들을 생각해내 함께 고민하고 여러 개발,기획자들이 여러 SNS 에서 여러분과 소통합니다. 불만사항이나 자기가 지금까지 생각하지 못했던것들은 세다인사이드 공식이메일로 보내주시거나 sns를 통해서 올려주시면 친절하게 답해드립니다.
+                        2018년도 부터는 여러분들과 세다인사이드가 함께하는 시간이 됐으면 좋겠습니다. 많은 관심과 사랑 부탁드립니다. - 세다인사이드 올림.
+                    </p>
+                  </div>
+                  <div class="mdl-dialog__actions">
+                    <button type="button" class="mdl-button close">닫기</button>
+                  </div>
+                </dialog>
+                <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons" style="color:gray">share</i>
+                </button>
+                </div>
+            </div>
+            <div style="height:1em"></div>
+            <div class="mdl-layout-spacer"></div>
         </div>
+        <div id="b2a" style="background-color:#FFFFFF;padding:3em;color:black;">
+           <h3 style="text-align:center;">활동분야</h3>
+            <div class="mdl-grid" style="text-align:center;">
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/seda games2.png') center / cover;background-color:#FFFFFF;color:white;width:100%;cursor:pointer" onclick="location.assign('https://sedainside.github.io/sedainside/games.html')" id="g1" onmouseover="min('g1');" onmouseout="mout('g1');">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
+                            <span>Seda Games</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/seda music.png') center / cover;background-color:#FFFFFF;color:white;width:100%;cursor:pointer" onclick="location.assign('https://sedainside.github.io/sedainside/music.html')" id="m1" onmouseover="min('m1');" onmouseout="mout('m1');">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
+                            <span>Seda Music</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/seda video art.png') center / cover;background-color: #FFFFFF;color:white;width:100%;cursor:pointer"  onclick="location.assign('https://sedainside.github.io/sedainside/video.html')" id="v1" onmouseover="min('v1');" onmouseout="mout('v1');">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
+                            <span>Seda Video art</span>
+                        </div>
+                    </div>
+                </div>     
+                <div class="mdl-layout-spacer"></div>
+            </div>
+         </div>
+     </div>
                <div id="b2" style="background-color:#ffffff;padding:3em;padding-top:7em;text-align:center;color:black;">
             <div class="mdl-grid">
                 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
@@ -143,108 +207,10 @@
                 </div>
             </div>
         </div>
-               <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-            <h2></h2>
-        <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-            <h2>인사말</h2>
-            <br>
-            <div class="mdl-grid">
-                <div class="mdl-layout-spacer"></div>
-                <div style="margin-left:1em;margin-right:1em;"class="mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" >
-                        
-                    <p class="black" style="text-align:left;" > 안녕하세요 세다인사이드 입니다. 2018년 저희가 야심차게 준비한 프로젝트를 진행하려고 합니다. 세다인사이드는 2017년 후반에 개설되어 2018년부터 정식 활동을 시작하였습니다. 세다인사이드는 사람들이 흥미와 재미를 느낄 수 있는 노래나 영상 그리고 게임들을 만들어서 트위치,유튜브,트위터,Google play그리고 웹사이트 등 여러곳에 게시물을 올려, 사람들이 보고 웃고 즐길수있는 일을 합니다. 여러명의 디자이너들과 제작자들,기획자들,프로그래머들이 함께하여 가장재미있을 것같은 컨텐츠들을 생각해내 함께 고민하고 여러 개발,기획자들이 여러 SNS 에서 여러분과 소통합니다. 불만사항이나 자기가 지금까지 생각하지 못했던것들은 세다인사이드 공식이메일로 보내주시거나 sns를 통해서 올려주시면 친절하게 답해드립니다.
-2018년도 부터는 여러분들과 세다인사이드가 함께하는 시간이 됐으면 좋겠습니다. 많은 관심과 사랑 부탁드립니다. - 세다인사이드 올림. </p>
-                 </div>
-             </div>
-          </div>
-          </div>
-        <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-            <h2></h2>
-        <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-            <h2>활동분야</h2>
-            <br>
-            <div class="mdl-grid">
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-                    <img src="images/seda games2.png" width="100%" style="max-width:256px;">
-                    <h3 class="black">Seda Games</h3>
-                    </div>
-     
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-                    <img src="images/seda music.png" width="100%" style="max-width:256px;">
-                    <h3 class="black">Seda Music</h3>
-                    </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-                    <img src="images/seda video art.png" width="100%" style="max-width:256px;">
-                    <h3 class="black">Seda Video art</h3>
-                           </div>
-                <div class="mdl-layout-spacer"></div>
+        <div class="mdl-layout-spacer"></div>
             </div>
         </div>
         </div>        
-        <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-            <h2 class="black">Seda Games</h2>
-            <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
-                <img src="images/seda games2.png" width="50%" style="max-width:128px;">                   
-                    <h2><b class="pink">Seda</b></h2>
-                    <h4>Games</h4>
-                    <hr class="mdl-cell--hide-desktop">
-                </div>
-                <div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:left">
-                    <p><b>Seda games</b>는 사람들이 쉽게 플레이 할 수 있고 다양한 사용자들이 즐길 수 있는 무료 모바일게임을 개발합니다. 배경음악은 Seda music의 음원을 사용하며, 수익성 보다는 대중성과 다양성을 중요하게 생각합니다. 게임에대한 불편사항이나 의견은 Google Play,Facebook,Twitter 그리고 공식이메일을 통해 남길 수 있습니다.</p>
-                <br>  
-            </div>                   
-           </div>
-            <hr>
-        </div>
-           <div id="b2a" style="background-color:#FFFFFF;padding:3em;color:black;">
-           <h5 class="gray">Projects</h5>
-            <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
-                <img src="images/Ballgame.png" width="100%" style="max-width:128px;">                   
-                    <h2><b>Ballgame</b></h2>
-                    <h4>(coming soon!)</h4>
-                    <hr class="mdl-cell--hide-desktop">
-                </div>
-                <div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:left">
-                    <p><b>Ballgame</b>은 떨어지는 블럭들을 피하며 여러 스테이지들을 클리어하는 클래식한 게임입니다. 스테이지의 난이도에 따라 블럭이 떨어지는 빈도와 속도가 다릅니다. 다양한 사용자가 가볍게 즐길 수 있도록 제작 하였습니다. Google Play에서 지원됩니다.(2018.03 출시예정)</p>
-                    <br>  
-            </div>                   
-                </div>
-            <hr>
-        </div>                
-        <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-           <h2 class="black">Seda Music</h2>
-            <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
-                <img src="images/seda music.png" width="50%" style="max-width:128px;">                   
-                    <h2><b class="pink">Seda</b></h2>
-                    <h4>Music</h4>
-                    <hr class="mdl-cell--hide-desktop">
-                </div>
-                <div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:left">
-                    <p><b class= "pink">Seda Music</b>은 주로 EDM,힙합 등의 장르위주로 개성있는 음악을 제작하고 락,발라드 등 다양한 장르의 음악을 시도합니다. 또한, Seda games와 Seda video art의 배경음악을 제작합니다. 주로 youtube를 통해 업로드 되며 Facebook과 Twitter에서도 만나볼 수 있습니다. 의견과 평가 또한 Youtube,Facebook,Twitter 그리고 공식이메일을 통해 남길 수 있습니다.</p>
-                <br>  
-            </div>                   
-           </div>
-            <hr>
-        </div>         
-        <div id="b3" style="background-color:#FFFFFF;padding:3em;text-align:center;" class="bg">
-           <h2 class="black">Seda Video art</h2>
-           <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
-                <img src="images/seda video art.png" width="50%" style="max-width:128px;">                   
-                    <h2><b class="pink">Seda</b></h2>
-                    <h4>Video art</h4>
-                    <hr class="mdl-cell--hide-desktop">
-                </div>
-                <div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:left">
-                    <p><b>Seda Video art</b>는 사람들이 보고싶거나 만들어보고싶은 영상들을 대신 만들어주거나 영상을 보고 사람들이 흥미를 느낄 수 있는 영상을 만듭니다.
-                       여러디자이너들과 상의를 하고 편집을 통해 시청자들이 흥미를 느낄만한 영상들을 모아서 공개합니다. 또한 Seda video art 의 작업물들은 Google Play,Facebook,Twitter 그리고 공식이메일을 통해 의견을 남길 수 있습니다.</p>
-                  <br>  
-            </div>                   
-           </div>
             <hr>
             <div class="mdl-layout-spacer"></div>
         </div>
@@ -329,7 +295,6 @@
             </div>
 
             </div>
-                <div class="mdl-layout-spacer"></div>
             </div>
         
     </main>
@@ -404,6 +369,17 @@
             //+ minutes + "m " + seconds + "s ";
             getreq();
         }, 60000);
+        var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
     </script>
 </body>
 </html>
