@@ -46,14 +46,6 @@
         .gray {
             color: #707070;
         }
-        .demo-layout-transparent {
-        background: url("images/display2.jpg") center / cover;
-        }
-        .demo-layout-transparent .mdl-layout__header,
-        .demo-layout-transparent .mdl-layout__drawer-button {
-  
-        color: white;
-        }
         .widecard > .mdl-card__title {
             color: #ffffff;
             height: 176px;
@@ -97,27 +89,26 @@
     </head>
 
 <body style="background-color:#ffffff">
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-    <div class="mdl-layout__header-row">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header" style="background-color:#000000">
+      <div class="mdl-layout__header-row" style="background-color:#000000">
         <span class="mdl-layout-title">Seda inside</span>
-                <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-
-        </div>
-      </header>
-     <div class="mdl-layout__drawer">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/ ">홈</a>
-          <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/팀소개.html "  >팀소개</a>
-          <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/games.html ">Seda Games</a>
-          <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/music.html ">Seda Music</a>
-          <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/video.html ">Seda Video art</a>
-        </nav>
+        <div class="mdl-layout-spacer"></div>
       </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/ ">홈</a>
+        <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/팀소개.html "  >팀소개</a>
+        <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/games.html ">Seda Games</a>
+        <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/music.html ">Seda Music</a>
+        <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/video.html ">Seda Video art</a>
+      </nav>
     </div>
-    <div style="height:27em"></div>
     <main class="mdl-layout__content animate-bottom" style="width:100%;display:none;" id="main">
+      <div class="page-content">
+        <div style="height:27em"></div>
         <div class="mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <div class="widecard mdl-card mdl-shadow--2dp center">
                 <div class="mdl-card__title">
@@ -128,18 +119,6 @@
                     <br>
                     <p style="font-size: 1em;"><b class= "pink">Seda Inside</b>는 팀원들간의 좋은 팀워크와 즐거운 분위기에서 서로 격려하며 사람들의 의견과 평가를 반영하여 작업하는 것이 특징입니다.Seda inside team의 긍정적 에너지가 저희의 작업물을 통해 여러분들께 전해졌으면 합니다!</p>  
                 </div>                    
-                <!-- <button id="show-dialog" type="button" class="mdl-button">더보기</button>
-                <dialog class="mdl-dialog">
-                  <h4 class="mdl-dialog__title">인사말</h4>
-                  <div class="mdl-dialog__content">
-                    <p style="font-size: 1em;">
-                        안녕하세요 세다인사이드 입니다. 2018년 저희가 야심차게 준비한 프로젝트를 진행하려고 합니다. 세다인사이드는 2017년 후반에 개설되어 2018년부터 정식 활동을 시작하였습니다. 세다인사이드는 사람들이 흥미와 재미를 느낄 수 있는 노래나 영상 그리고 게임들을 만들어서 트위치,유튜브,트위터,Google play그리고 웹사이트 등 여러곳에 게시물을 올려, 사람들이 보고 웃고 즐길수있는 일을 합니다. 여러명의 디자이너들과 제작자들,기획자들,프로그래머들이 함께하여 가장재미있을 것같은 컨텐츠들을 생각해내 함께 고민하고 여러 개발,기획자들이 여러 SNS 에서 여러분과 소통합니다. 불만사항이나 자기가 지금까지 생각하지 못했던것들은 세다인사이드 공식이메일로 보내주시거나 sns를 통해서 올려주시면 친절하게 답해드립니다.
-                        2018년도 부터는 여러분들과 세다인사이드가 함께하는 시간이 됐으면 좋겠습니다. 많은 관심과 사랑 부탁드립니다. - 세다인사이드 올림.
-                    </p>
-                  </div> -->
-                  <!-- <div class="mdl-dialog__actions">
-                    <button type="button" class="mdl-button close">닫기</button>
-                  </div> -->
                 </dialog>
                 <div class="mdl-card__menu">
                 <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -147,137 +126,9 @@
                 </button>
                 </div>
             </div>
-            <div style="height:1em"></div>
-            <div class="mdl-layout-spacer"></div>
         </div>
-        <div id="b2a" style="background-color:#FFFFFF;padding:3em;color:black;">
-           <h3 style="text-align:center;">활동분야</h3>
-            <div class="mdl-grid" style="text-align:center;">
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/seda games2.png') center / cover;background-color:#FFFFFF;color:white;width:100%;cursor:pointer" onclick="location.assign('https://sedainside.github.io/sedainside/games.html')" id="g1" onmouseover="min('g1');" onmouseout="mout('g1');">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>Seda Games</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/seda music.png') center / cover;background-color:#FFFFFF;color:white;width:100%;cursor:pointer" onclick="location.assign('https://sedainside.github.io/sedainside/music.html')" id="m1" onmouseover="min('m1');" onmouseout="mout('m1');">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>Seda Music</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/seda video art.png') center / cover;background-color: #FFFFFF;color:white;width:100%;cursor:pointer"  onclick="location.assign('https://sedainside.github.io/sedainside/video.html')" id="v1" onmouseover="min('v1');" onmouseout="mout('v1');">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>Seda Video art</span>
-                        </div>
-                    </div>
-                </div>     
-                <div class="mdl-layout-spacer"></div>
-            </div>
-         </div>
-     </div>
-               <div id="b2" style="background-color:#ffffff;padding:3em;padding-top:7em;text-align:center;color:black;">
-            <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
-                    <img src="images/창의성.jpg" width="100%" style="max-width:128px; ">
-                    <h4>창의성</h4>
-                    <p class="gray">창의적인 아이디어는 저희작업물의 핵심입니다.</p>
-                </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
-                    <img src="images/대중성.png" width="100%" style="max-width:128px; ">
-                    <h4>대중성</h4>
-                    <p class="gray">많은사람들과 다양한 사람들이 즐길수있는 컨텐츠를 제작합니다.</p>
-                </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
-                    <img src="images/소통.jpg" width="100%" style="max-width:128px; ">
-                    <h4>소통</h4>
-                    <p class="gray">평가와 의견들을 남길 수 있는 다양한 방법이 마련되어있고,의견들을 적극적으로 수용합니다.</p>
-                </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
-                  <img src="images/다양성.jpg" width="100%" style="max-width:128px; ">
-                    <h4>다양성</h4>
-                    <p class="gray">저희는 다양성을 추구합니다.각 분야에서 여러장르에 도전하고,제작합니다.</p>
-                </div>
-            </div>
-        </div>
-        <div class="mdl-layout-spacer"></div>
-            </div>
-        </div>
-        </div>        
-            <hr>
-            <div class="mdl-layout-spacer"></div>
-        </div>
-        <div id="b2a" style="background-color:#FFFFFF;padding:3em;color:black;">
-           <h3 style="text-align:center;">Members</h3>
-            <div class="mdl-grid" style="text-align:center;">
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/A.C.D.I.jpg') center / cover;background-color:#FFFFFF;color:white;width:100%;cursor:pointer">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>박세현(ACDI)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/daneog.png') center / cover;background-color:#FFFFFF;color:white;width:100%;cursor:pointer">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>황현웅(Daneog)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/nickname.png') center / cover;background-color: #FFFFFF;color:white;width:100%;cursor:pointer">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>황재용(Nickname)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/김민경.jpg') center / cover;background-color:#29434e;color:white;width:100%;cursor:pointer">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>김민경(Mk)</span>
-                        </div>
-                    </div>
-                </div>    
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/none.jpg') center / cover;background-color:#29434e;color:white;width:100%;cursor:pointer">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>이창규()</span>
-                        </div>
-                    </div>
-                </div>
-                 <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp" style="background:url('images/none.jpg') center / cover;background-color:#29434e;color:white;width:100%;cursor:pointer">
-                        <div class="mdl-card__title mdl-card--expand"></div>
-                        <div class="mdl-card__actions" style="height:52px;padding:16px;background:rgba(0, 0, 0, 0.4);">
-                            <span>권태훈()</span>
-                        </div>
-                    </div>
-                </div>         
-                <div class="mdl-layout-spacer"></div>
-            </div>
-         </div>
-     </div>
-         
-                <div class="mdl-layout-spacer"></div>
-            </div>
-        </div>
-        <div style="background:linear-gradient(#FFFFFF ,#1F6E8F);height:300px;"></div>
-        <div id="contact" style="background-color:#1F6E8F;padding:3em;padding-top:6em;position:inherit;color:white;">
-            <br />
-           
-                 <br/>            
+        <div style="background:linear-gradient(#FFFFFF ,black);height:300px;"></div>
+        <div id="contact" style="background-color:black;padding:3em;padding-top:6em;position:inherit;color:white;">          
                 <div class="mdl-grid"></div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="padding:5em;">
                 <img src = "images/sedainside1.png" width="100%" style="max-width=128px;">
@@ -292,10 +143,10 @@
                     </div>
                 <div class="mdl-layout-spacer"></div>
             </div>
-        </div>
-    </div>
-        
+        </div>   
+      </div>
     </main>
+  </div>
 
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
