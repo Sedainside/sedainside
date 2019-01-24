@@ -46,6 +46,29 @@
         .gray {
             color: #707070;
         }
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+        #slideshow { 
+            margin: auto; 
+            position: relative; 
+            width: 413px; 
+            height: 208px; 
+            padding: 10px; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+        }
+
+        #slideshow > div { 
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            right: 10px; 
+            bottom: 10px; 
+        }
         .widecard > .mdl-card__title {
             color: #ffffff;
             height: 176px;
@@ -119,7 +142,6 @@
                     <br>
                     <p style="font-size: 1em;"><b class= "pink">Seda Inside</b>는 팀원들간의 좋은 팀워크와 즐거운 분위기에서 서로 격려하며 사람들의 의견과 평가를 반영하여 작업하는 것이 특징입니다.Seda inside team의 긍정적 에너지가 저희의 작업물을 통해 여러분들께 전해졌으면 합니다!</p>  
                 </div>                    
-                </dialog>
                 <div class="mdl-card__menu">
                 <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
                     <i class="material-icons" style="color:gray">share</i>
@@ -127,6 +149,17 @@
                 </div>
             </div>
         </div>
+        <div id="slideshow">
+            <div>
+              <img src="images/seda gmaes2.png">
+            </div>
+            <div>
+              <img src="images/sedamusic.png">
+            </div>
+            <div>
+              <img src="images/seda video art.png">
+            </div>
+         </div>
         <div style="background:linear-gradient(#FFFFFF ,black);height:300px;"></div>
         <div id="contact" style="background-color:black;padding:3em;padding-top:6em;position:inherit;color:white;">          
                 <div class="mdl-grid"></div>
@@ -167,6 +200,16 @@
                 }
             });
         }
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() { 
+        $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+        },  3000);
         function min(id) {
             var child = document.getElementById(id);
             child.classList.remove("mdl-shadow--2dp");
