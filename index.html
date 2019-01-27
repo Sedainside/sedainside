@@ -110,8 +110,8 @@
     </style>
     </head>
 
-<body style="background-color:#ffffff">
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<body style="background-color:#ffffff;width:100%;">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="width:100%">
     <header class="mdl-layout__header" style="background-color:#000000">
       <div class="mdl-layout__header-row" style="background-color:#000000">
         <span class="mdl-layout-title">Seda inside</span>
@@ -128,10 +128,12 @@
         <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/video.html ">Seda Video art</a>
       </nav>
     </div>
-    <main class="mdl-layout__content animate-bottom" style="width:100%;display:none;" id="main">
-      <div class="page-content">
-        <div class="mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-            <img class= "center" src="images/무제-1.jpg" style="width:100%">
+    <main class="mdl-layout__content animate-bottom" style="width:100%;" id="main">
+      <div class="page-content" style="width:100%;">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--4-col-phone" style="width:100%">
+            <div style="margin-top: 100px;width:100%;margin-left: 20%;">
+                <img width="60%" src="images/무제-1.jpg">
+            </div>
         </div>
         <div id="slideshow">
             <div>
@@ -170,9 +172,6 @@
     <script src="jquery-ui.min.js"></script>
     <script>
         window.onload = function(){
-            getreq();
-            document.getElementById("main").style.display = "";
-            document.getElementById("loading").style.display = "none";
             var h = window.innerHeight;
             $("a").on('click', function(event) {
                 if (this.hash !== "") {
@@ -194,68 +193,6 @@
         .end()
         .appendTo('#slideshow');
         },  3000);
-        function min(id) {
-            var child = document.getElementById(id);
-            child.classList.remove("mdl-shadow--2dp");
-            child.classList.add("mdl-shadow--12dp");
-            child.children[1].style.background = "rgba(0, 0, 0, 0.8)"
-        }
-        function mout(id) {
-            var child = document.getElementById(id);
-            child.classList.remove("mdl-shadow--12dp");
-            child.classList.add("mdl-shadow--2dp");
-            child.children[1].style.background = "rgba(0, 0, 0, 0.2)"
-        }
-        function corsreq(method, url) {
-            var xhr = new XMLHttpRequest();
-            if ("withCredentials" in xhr) {
-                xhr.open(method, url, true);
-            } else if (typeof XDomainRequest != "undefined") {
-                xhr = new XDomainRequest();
-                xhr.open(method, url);
-            } else {
-                xhr = null;
-            }
-            return xhr;
-        }
-        function getreq() {
-            var req = corsreq("get", "https://blockchain.info/q/getblockcount");
-            if (req) {
-                req.onload = function() {
-                    var distance = req.responseText;
-                    document.getElementById("clock").innerHTML = distance;
-                    if (distance < 0) {
-                        clearInterval(x);
-                        document.getElementById("ct").style.display = "none";
-                        document.getElementById("ct1").style.display = "";
-                    }
-                };
-                req.send();
-            }
-        }
-        //var countDownDate = new Date("Dec 23, 2017 00:00:00").getTime();
-        var x = setInterval(function() {
-            //var now = new Date().getTime();
-            //var distance = countDownDate - now;
-            //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            //var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            //var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            //document.getElementById("clock").innerHTML = days + "d " + hours + "h "
-            //+ minutes + "m " + seconds + "s ";
-            getreq();
-        }, 60000);
-        var dialog = document.querySelector('dialog');
-    var showDialogButton = document.querySelector('#show-dialog');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    showDialogButton.addEventListener('click', function() {
-      dialog.showModal();
-    });
-    dialog.querySelector('.close').addEventListener('click', function() {
-      dialog.close();
-    });
     </script>
 </body>
 </html>
