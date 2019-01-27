@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seda Inside</title>
     <meta charset="utf-8">
  <meta name="google-site-verification" content="RXuqmta_qQQggMyWerczeIstwZFqQMADTQIyhthQ6Eo" />
@@ -22,12 +23,6 @@
     <style>
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
-        }
-        p, a {
-            font-size: 1.5em;
-        }
-        h5 {
-            font-size: 1.6em;
         }
         ::-webkit-scrollbar {
             display: none;
@@ -56,17 +51,11 @@
         #slideshow { 
             margin: auto; 
             position: relative; 
-            width: 600px; 
-            height: 300px; 
-            padding: 10px; 
+            width: 100%; 
         }
 
         #slideshow > div { 
             position: absolute; 
-            top: 10px; 
-            left: 10px; 
-            right: 10px; 
-            bottom: 10px; 
         }
         .widecard > .mdl-card__title {
             color: #ffffff;
@@ -135,32 +124,57 @@
                 <img width="60%" src="images/무제-1.jpg">
             </div>
         </div>
-        <div id="slideshow">
+        <div id="slideshow" style="margin-top: 100px;width:100%;">
             <div>
-              <img style="width:100%;margin-left: 20%;" src="images/seda games2.png">
+              <img style="width:100%;" src="images/seda games2.png">
             </div>
             <div>
-              <img style="width:100%;margin-left: 20%;" src="images/seda music.png">
+              <img style="width:100%;" src="images/seda music.png">
             </div>
             <div>
-              <img style="width:100%;margin-left: 20%;" src="images/seda video art.png">
+              <img style="width:100%;" src="images/seda video art.png">
             </div>
          </div>
-        <div style="background:linear-gradient(#FFFFFF ,black);height:300px;"></div>
-        <div id="contact" style="background-color:black;padding:3em;padding-top:6em;position:inherit;color:white;">          
-                <div class="mdl-grid"></div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="padding:5em;">
-                <img src = "images/sedainside1.png" width="100%" style="max-width=128px;">
+         <table class="mdl-data-table mdl-js-data-table mdl-data-table" style="margin-top:100%; width:50%">
+                <thead>
+                  <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                  </tr>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                  </tr>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                  </tr>
+                </tbody>
+              </table>
+        <div style="background:linear-gradient(#FFFFFF ,black);height:250px;"></div>
+        <div id="contact" style="background-color:black;padding:2em;padding-top:6em;position:inherit;color:white;">          
+                <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                 <br/>
                     <div>
                         <h3>Contact</h3>
-                        <p style="font-size:1.4rem;">Send us a great ideas, or you can <a style="font-size:1.4rem;" href="">support us</a></p>
-                        <h4><a href="mailto:sedaleon2017@gmail.com"><i class="material-icons" style= "color:white;">mail</i></a> sedaleon2017@gmail.com</h4>
-                        <h4><a href="https://www.youtube.com/channel/UCVc4GTotwuDLcKdgobMDSYg"><i class="fa fa-youtube-play" style="font-size:1.5rem;color:white;"></i></a> Youtube"Seda inside"</h4>                        
-                        <h4><a herf="https://www.5facebook.com/Seda-1550402428384947/"><i class="fa fa-facebook" style="font-size:1.4rem;color:white; "></i></a>  FaceBook"Seda"</h4>
-                        <h4><a herf="https://twitter.com/Sedainside2017"><i class="fa fa-twitter" style="font-size:1.4rem;color:white;"></i></a> @sedainside2017</h4>
+                        <p style="font-size:1.4rem">Send us a great ideas, or you can <a style="font-size:1.4rem;" href="">support us</a></p>
+                        <h4 style="font-size:16px"><a href="mailto:sedaleon2017@gmail.com"><i class="material-icons" style= "color:white;font-size:20px;padding-top: 1px;">mail</i></a> sedaleon2017@gmail.com</h4>
+                        <h4 style="font-size:16px"><a href="https://www.youtube.com/channel/UCVc4GTotwuDLcKdgobMDSYg"><i class="fa fa-youtube-play" style="font-size:1.5rem;color:white;"></i></a> Youtube"Seda inside"</h4>                        
+                        <h4 style="font-size:16px"><a herf="https://www.5facebook.com/Seda-1550402428384947/"><i class="fa fa-facebook" style="font-size:1.4rem;color:white; "></i></a>  FaceBook"Seda"</h4>
+                        <h4 style="font-size:16px"><a herf="https://twitter.com/Sedainside2017"><i class="fa fa-twitter" style="font-size:1.4rem;color:white;"></i></a> @sedainside2017</h4>
                     </div>
-                <div class="mdl-layout-spacer"></div>
+            </div>
             </div>
         </div>   
       </div>
@@ -173,6 +187,8 @@
     <script>
         window.onload = function(){
             var h = window.innerHeight;
+            var w = window.innerWidth;
+            document.getElementById("main").style.width = w + "px";
             $("a").on('click', function(event) {
                 if (this.hash !== "") {
                     event.preventDefault();
