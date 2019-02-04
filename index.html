@@ -52,7 +52,6 @@
             position: relative; 
             width: 50%; 
         }
-
         #slideshow > div { 
             position: absolute; 
         }
@@ -82,6 +81,119 @@
             animation-name: animatebottom;
             animation-duration: 1s
         }
+        body {
+        font-family: helvetica;
+        }
+        #content {
+        margin-top: 50px;
+        text-align: center;
+        }
+        section.timeline-outer {
+        width: 80%;
+        margin: 0 auto;
+        }
+        h1.header {
+        font-size: 50px;
+        line-height: 70px;
+        }
+        .timeline {
+        border-left: 8px solid #42A5F5;
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        color: #333;
+        margin: 50px auto;
+        letter-spacing: 0.5px;
+        position: relative;
+        line-height: 1.4em;
+        padding: 20px;
+        list-style: none;
+        text-align: left;
+        }
+        .timeline h1,
+        .timeline h2,
+        .timeline h3 {
+        font-size: 1.4em;
+        }
+        .timeline .event {
+        border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        }
+        .timeline .event:last-of-type {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+        }
+        .timeline .event:before,
+        .timeline .event:after {
+        position: absolute;
+        display: block;
+        top: 0;
+        }
+        .timeline .event:before {
+        left: -177.5px;
+        color: #212121;
+        content: attr(data-date);
+        text-align: right;        
+        font-size: 16px;
+        min-width: 120px;
+        }
+        .timeline .event:after {
+        box-shadow: 0 0 0 8px #42A5F5;
+        left: -30px;
+        background: #212121;
+        border-radius: 50%;
+        height: 11px;
+        width: 11px;
+        content: "";
+        top: 5px;
+        }
+        @media (max-width: 945px) {
+        .timeline .event::before {
+            left: 0.5px;
+            top: 20px;
+            min-width: 0;
+            font-size: 13px;
+        }
+        .timeline h3 {
+            font-size: 16px;
+        }
+        .timeline p {
+            padding-top: 20px;
+        }
+        section.lab h3.card-title {
+            padding: 5px;
+            font-size: 16px
+        }
+        }
+
+        @media (max-width: 768px) {
+        .timeline .event::before {
+            left: 0.5px;
+            top: 20px;
+            min-width: 0;
+            font-size: 13px;
+        }
+        .timeline .event:nth-child(1)::before,
+        .timeline .event:nth-child(3)::before,
+        .timeline .event:nth-child(5)::before {
+            top: 38px;
+        }
+        .timeline h3 {
+            font-size: 16px;
+        }
+        .timeline p {
+            padding-top: 20px;
+        }
+        }
+
+        a.portfolio-link {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        }
         @-webkit-keyframes animatebottom {
             from { bottom:-100px; opacity:0 }
             to { bottom:0px; opacity:1 }
@@ -108,35 +220,32 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Seda inside</span>
                 <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href=" ">홈</a>
-                <a class="mdl-navigation__link" href=" "  >팀소개</a>
-                <a class="mdl-navigation__link" href=" ">Seda Games</a>
-                <a class="mdl-navigation__link" href=" ">Seda Music</a>
-                <a class="mdl-navigation__link" href=" ">Seda Video art</a>
+                <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/ ">홈</a>
+                <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/팀소개.html "  >팀소개</a>
+                <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/games.html ">Seda Games</a>
+                <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/music.html ">Seda Music</a>
+                <a class="mdl-navigation__link" href=" https://sedainside.github.io/sedainside/video.html ">Seda Video art</a>
                 </nav>
             </div>
         <main class="mdl-layout__content">
             <div class="page-content; width:100%">
                 <div class="mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--4-col-phone" style="width:90%">
                     <div style="margin-top: 20%;margin-left: 5%; width:100%;" class="center">
-                        <img width="100%" src="images/무제-1.jpg">
+                        <img width="100%" src="images/무제.png">
+                        <h5 class="center"><b>S</b>ervice of</h5>
+                        <h5 class="center"><b>E</b>xtra special</h5> 
+                        <h5 class="center"><b>D</b>evelop technology</h5>   
+                        <h5 class="center"><b>A</b>pproaching to crowd</h5>
                     </div>
                 </div>
-                <div id="slideshow" style="margin-top: 100px;width:40%;" class="center">
-                    <div>
-                      <img style="width:100%;" src="images/seda games2.png">
-                    </div>
-                    <div>
-                      <img style="width:100%;" src="images/seda music.png">
-                    </div>
-                    <div>
-                      <img style="width:100%;" src="images/seda video art.png">
-                    </div>
-                 </div>
-                 <table class="mdl-data-table mdl-js-data-table mdl-data-table center" style="margin-top:300px; width:50%">
+                <br>                    
+                <h5 style="font-size: 2.5em" class="center">Plans</h5>
+                <div style="background-color: gray">
+                    <hr>
+                 <table class="mdl-data-table mdl-js-data-table mdl-data-table center" style="width:50%;">
                         <thead>
                           <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Material</th>
+                            <th class="mdl-data-table__cell--non-numeric">프로젝트</th>
                             <th>Quantity</th>
                           </tr>
                         </thead>
@@ -153,8 +262,73 @@
                             <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
                             <td>10</td>
                           </tr>
+                          <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                            <td>25</td>
+                          </tr>
+                          <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                            <td>50</td>
+                          </tr>
+                          <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                            <td>10</td>
+                          </tr>
                         </tbody>
                       </table>
+                      <br>
+                    </div>
+                      <div class="main-container">
+                        <section id="timeline" class="timeline-outer">
+                          <div class="container" id="content">
+                            <div class="row">
+                              <div class="col s12 m12 l12">
+                               <h5 style="font-size:2.5em" class="center">Timeline</h5>
+                               <hr>
+                                <ul class="timeline">
+                                  <h3>Seda inside팀 설립</h3>                                  
+                                    <li class="event" data-date="2018/01">
+                                        <br>
+                                    <p>
+                                        Service of Extra special Develop technology Approaching to crowd
+                                    </p>
+                                    </li>
+                                  <h3>Chase The Light 출시</h3>
+                                    <li class="event" data-date="2018/06">
+                                        <br>                                    
+                                    <p>
+                                        Service of Extra special Develop technology Approaching to crowd
+                                    </p>
+                                    <p>
+                                        Service of Extra special Develop technology Approaching to crowd
+                                    </p>
+                                  </li>
+                                  <h3>Seda Music,Video Art 활동 종료 </h3>
+                                    <li class="event" data-date="2018/12">
+                                        <br>
+                                    <p>
+                                        Service of Extra special Develop technology Approaching to crowd
+                                    </p>
+                                    </li>
+                                  <h3>Seda Games-> Seda inside 개편</h3>
+                                    <li class="event" data-date="2019/01">
+                                        <br>
+                                    <p>
+                                        Service of Extra special Develop technology Approaching to crowd
+                                    </p>
+                                    </li>
+                                  <h3>Seda inside Renew</h3>
+                                    <li class="event" data-date="2019/02">
+                                        <br>
+                                    <p>Service of Extra special Develop technology Approaching to crowd</p>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <br/>
+                      </div>
                 <div style="background:linear-gradient(#FFFFFF ,black);height:250px;"></div>
                 <div id="contact" style="background-color:black;padding:2em;padding-top:6em;position:inherit;color:white;">          
                         <div class="mdl-grid">
@@ -168,7 +342,7 @@
                                 <h4 style="font-size:16px"><a herf="https://www.5facebook.com/Seda-1550402428384947/"><i class="fa fa-facebook" style="font-size:1.4rem;color:white; "></i></a>  FaceBook"Seda"</h4>
                                 <h4 style="font-size:16px"><a herf="https://twitter.com/Sedainside2017"><i class="fa fa-twitter" style="font-size:1.4rem;color:white;"></i></a> @sedainside2017</h4>
                             </div>
-                    </div>
+                        </div>
                     </div>
                 </div> 
             </div>
